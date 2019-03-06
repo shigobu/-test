@@ -19,6 +19,10 @@ namespace 元年テスト
             Console.WriteLine($"{date:ggy年MM月d日}");
             Console.WriteLine(date.ToString("ggy'年'MM月dd日", jaJP));
             Console.WriteLine($"{date:ggy'年'MM月d日}");
+
+            date = new DateTime(2001, 8, 18);
+            Console.WriteLine($"{date:ggyy'年'MM月d日}");
+
             Console.Read();
         }
     }
