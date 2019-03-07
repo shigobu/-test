@@ -14,13 +14,17 @@ namespace 元年テスト
             var cal = new JapaneseCalendar();
             var jaJP = new CultureInfo("ja-JP", false);
             jaJP.DateTimeFormat.Calendar = cal;
+            CultureInfo.CurrentCulture = jaJP;
             Console.WriteLine(date.ToString("ggy年MM月dd日", jaJP));
             Console.WriteLine($"{date:ggy年MM月d日}");
             Console.WriteLine(date.ToString("ggy'年'MM月dd日", jaJP));
             Console.WriteLine($"{date:ggy'年'MM月d日}");
+            Console.WriteLine($"{date:y}");
 
             date = new DateTime(2001, 8, 18);
             Console.WriteLine($"{date:ggyy'年'MM月d日}");
+
+            Console.WriteLine(DateTime.Now.Ticks);
 
             Console.Read();
         }
